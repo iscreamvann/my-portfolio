@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
+import styled from "styled-components";
 
+const AboutPageStyled = styled.div`
+@media (max-width:767px){
+height:1100px;
+}
+`
 const About = () => {
 
   useEffect(() => {
@@ -46,7 +52,7 @@ const About = () => {
   }, []);
 
   return (
-    <div
+    <AboutPageStyled
       id="about"
       className="relative w-full h-screen"
     >
@@ -75,7 +81,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </AboutPageStyled>
   );
 };
 

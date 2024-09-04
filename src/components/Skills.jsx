@@ -157,7 +157,7 @@ function Skills() {
             <p className='my-4'>EXPRESS</p>
           </SkillItem>
           <SkillItem>
-            <p className='my-4'>TYPESCRIPT</p>
+            <p className='my-4'>TAILWIND</p>
           </SkillItem>
           <SkillItem>
             <p className='my-4'>TDD</p>

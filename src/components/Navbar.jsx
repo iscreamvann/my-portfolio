@@ -14,7 +14,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#1CD760] text-[#FFFFFF] z-50'>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#1CD760] text-[#000000] z-50'>
       <div>
         <h1 className='text-2xl font-semibold font-poppins'>KV</h1>
       </div>
