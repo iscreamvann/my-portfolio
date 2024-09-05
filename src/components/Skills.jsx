@@ -135,42 +135,138 @@ function Skills() {
           I enjoy diving into and learning new things. Here's a list of technologies I've worked with
         </p>
         <SkillsGrid>
-          <SkillItem>
-            <p className='my-4'>REACT</p>
-          </SkillItem>
-          <SkillItem>
-            <p className='my-4'>JAVASCRIPT</p>
-          </SkillItem>
-          <SkillItem>
-            <p className='my-4'>HTML</p>
-          </SkillItem>
-          <SkillItem>
-            <p className='my-4'>CSS</p>
-          </SkillItem>
-          <SkillItem>
-            <p className='my-4'>GIT</p>
-          </SkillItem>
-          <SkillItem>
-            <p className='my-4'>NODE.JS</p>
-          </SkillItem>
-          <SkillItem>
-            <p className='my-4'>EXPRESS</p>
-          </SkillItem>
-          <SkillItem>
-            <p className='my-4'>TAILWIND</p>
-          </SkillItem>
-          <SkillItem>
-            <p className='my-4'>TDD</p>
-          </SkillItem>
-          <SkillItem>
-            <p className='my-4'>OOP</p>
-          </SkillItem>
-          <SkillItem>
-            <p className='my-4'>STYLED COMPONENTS</p>
-          </SkillItem>
-          <SkillItem>
-            <p className='my-4'>POSTGRESQL</p>
-          </SkillItem>
+        <SkillItem>
+  <div className="flex justify-center items-center">
+    <p className="my-4 text-lg">REACT</p>
+    <img
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+      alt="React Icon"
+      className="w-8 h-8 ml-5"
+    />
+  </div>
+</SkillItem>
+
+<SkillItem>
+  <div className="flex justify-center items-center">
+    <p className="my-4 text-lg">JAVASCRIPT</p>
+    <img
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+      alt="JavaScript Icon"
+      className="w-8 h-8 ml-5"
+    />
+  </div>
+</SkillItem>
+
+<SkillItem>
+  <div className="flex justify-center items-center">
+    <p className="my-4 text-lg">HTML</p>
+    <img
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+      alt="HTML Icon"
+      className="w-8 h-8 ml-5"
+    />
+  </div>
+</SkillItem>
+
+<SkillItem>
+  <div className="flex justify-center items-center">
+    <p className="my-4 text-lg">CSS</p>
+    <img
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+      alt="CSS Icon"
+      className="w-8 h-8 ml-5"
+    />
+  </div>
+</SkillItem>
+
+<SkillItem>
+  <div className="flex items-center justify-center">
+    <p className="my-4 text-lg">GIT</p>
+    <img
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+      alt="Git Icon"
+      className="w-8 h-8 ml-5"
+    />
+  </div>
+</SkillItem>
+
+<SkillItem>
+  <div className="flex items-center justify-center">
+    <p className="my-4 text-lg">NODE.JS</p>
+    <img
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+      alt="Node.js Icon"
+      className="w-8 h-8 ml-5"
+    />
+  </div>
+</SkillItem>
+
+<SkillItem>
+  <div className="flex items-center justify-center">
+    <p className="my-4 text-lg">EXPRESS</p>
+    <img
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+      alt="Express Icon"
+      className="w-8 h-8 ml-5"
+    />
+  </div>
+</SkillItem>
+
+<SkillItem>
+  <div className="flex items-center justify-center">
+    <p className="my-4 text-lg">TAILWIND</p>
+    <img
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+      alt="Tailwind CSS Icon"
+      className="w-8 h-8 ml-5"
+    />
+  </div>
+</SkillItem>
+
+<SkillItem>
+  <div className="flex items-center justify-center">
+    <p className="my-4 text-lg">POSTMAN</p>
+    <img
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+      alt="Postman Icon"
+      className="w-8 h-8 ml-5"
+    />
+  </div>
+</SkillItem>
+
+<SkillItem>
+  <div className="flex items-center justify-center">
+    <p className="my-4 text-lg">GITHUB</p>
+    <img
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+      alt="GitHub Icon"
+      className="w-8 h-8 ml-5"
+    />
+  </div>
+</SkillItem>
+
+<SkillItem>
+  <div className="flex items-center justify-center">
+    <p className="my-4 text-lg">PRISMA</p>
+    <img
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg"
+      alt="Prisma Icon"
+      className="w-8 h-8 ml-5"
+    />
+  </div>
+</SkillItem>
+
+<SkillItem>
+  <div className="flex items-center justify-center">
+    <p className="my-4 text-lg">POSTGRESQL</p>
+    <img
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+      alt="PostgreSQL Icon"
+      className="w-8 h-8 ml-5"
+    />
+  </div>
+</SkillItem>
+
         </SkillsGrid>
       </Content>
     </BubblesContainer>
