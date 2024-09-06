@@ -33,7 +33,7 @@ const BubblesContainer = styled.div`
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: #FFFFFF; /* Page background set to white */
+  background: #E3E3E3; /* Page background set to white */
   color: #000; /* Text color set to black for better contrast */
 `;
 
