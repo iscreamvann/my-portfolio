@@ -10,8 +10,9 @@ const Home = () => {
       name="home"
       className="h-screen w-full bg-[#E3E3E3] relative pt-[80px]" 
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-8 md:px-16 md:flex-row">
-        <div className="flex flex-col justify-center h-full md:pr-12">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-8 md:px-16">
+        {/* Center content */}
+        <div className="flex flex-col justify-center h-full items-center text-center md:pr-12">
           <h2 className="text-4xl sm:text-7xl font-bold text-gray-900">
             Hey,{" "}
             <span>
@@ -23,8 +24,7 @@ const Home = () => {
                 deleteSpeed={80}   
                 delaySpeed={1500}  
                 loop={1}           
-                onLoopDone={() => {
-                }}
+                onLoopDone={() => {}}
               />
             </span>
           </h2>

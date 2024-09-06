@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 const Typewriter = ({ text, replacementText, typingSpeed = 100, backspaceSpeed = 50 }) => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(true); // To toggle between typing and backspacing
-  const [isReplacing, setIsReplacing] = useState(false); // To handle replacement
+  const [isTyping, setIsTyping] = useState(true);
+  const [isReplacing, setIsReplacing] = useState(false);
 
   useEffect(() => {
     if (isTyping) {
@@ -20,7 +20,7 @@ const Typewriter = ({ text, replacementText, typingSpeed = 100, backspaceSpeed =
         setTimeout(() => {
           setCurrentIndex(text.length - 1);
           setIsTyping(false);
-        }, typingSpeed); // Delay before starting backspace
+        }, typingSpeed);
       }
     } else if (isReplacing) {
       if (currentIndex >= 0) {
