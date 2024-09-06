@@ -2,6 +2,7 @@ import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import me from '../assets/me.png';
 import { Link } from 'react-scroll';
+import { Typewriter } from 'react-simple-typewriter';  // Import Typewriter
 
 const Home = () => {
   return (
@@ -12,7 +13,20 @@ const Home = () => {
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-8 md:px-16 md:flex-row">
         <div className="flex flex-col justify-center h-full md:pr-12">
           <h2 className="text-4xl sm:text-7xl font-bold text-gray-900">
-            Hey, I'm Kyle
+            Hey,{" "}
+            <span>
+              <Typewriter
+                words={["I'm Kyle", "A Full-Stack Engineer."]}
+                cursor
+                cursorStyle="|"
+                typeSpeed={180}    
+                deleteSpeed={80}   
+                delaySpeed={1500}  
+                loop={1}           
+                onLoopDone={() => {
+                }}
+              />
+            </span>
           </h2>
           <p className="text-gray-700 py-4 max-w-md">
             With two years of hands-on coding experience, this portfolio highlights my journey through the tech world. Based in the UK, I specialize in crafting web applications using technologies such as React, Tailwind, Next.js, and MongoDB. Explore a diverse range of projects that showcase my dedication to innovation and problem-solving.

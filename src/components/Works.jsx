@@ -1,6 +1,4 @@
 import React from 'react';
-
-// Array of project objects
 const projects = [
   {
     name: 'CSS Spotify Replica',
@@ -23,7 +21,6 @@ const projects = [
     demoLink: 'https://main--kylevannportfolio.netlify.app/',
     codeLink: 'https://github.com/iscreamvann/my-portfolio.git',
   },
-  // Add more projects here
 ];
 
 const Works = () => {
@@ -36,16 +33,16 @@ const Works = () => {
           </p>
           <p className='py-6 text-2xl'>Check out some of my most recent work</p>
         </div>
-        {/* Container */}
+
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
-          {/* Map over the projects array to create grid items */}
+
           {projects.map((project, index) => (
             <div
               key={index}
               style={{ backgroundImage: `url(${project.image})` }}
               className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
             >
-              {/* Hover Effects */}
+
               <div className='opacity-0 group-hover:opacity-100 flex justify-center items-center flex-col'>
                 <span className='text-lg font-bold text-black tracking-wider'>
                   {project.name}
