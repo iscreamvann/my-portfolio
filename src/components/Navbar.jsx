@@ -9,7 +9,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#1CD760] text-[#000000] z-50">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-gradient-to-r from-[#1CD760] to-[#16a34a] text-[#000000] shadow-md z-50">
       <h1 className="text-2xl font-semibold font-poppins">KV</h1>
       <ul className="hidden md:flex gap-x-8">
         {['home', 'about', 'skills', 'work', 'contact'].map((section) => (
@@ -18,7 +18,7 @@ const Navbar = () => {
               to={section}
               smooth={true}
               duration={500}
-              className="font-poppins hover:text-gray-900"
+              className="font-poppins hover:text-white"
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </Link>
