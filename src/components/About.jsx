@@ -52,7 +52,7 @@ const About = () => {
     <AboutPageStyled id="about" className="relative w-full h-screen">
       <canvas id="c" className="absolute top-0 left-0 w-full h-full -z-10"></canvas>
       <div className="relative flex flex-col justify-center items-center w-full h-full">
-        <div className="py-16 rounded-md bg-[#1CD760] flex flex-col justify-center items-center w-4/6">
+        <div className="py-16 rounded-md bg-gradient-to-r from-[#1CD760] to-[#16a34a]  flex flex-col justify-center items-center w-4/6">
           <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8 mb-4">
             <div className="sm:text-right pb-8 pl-4">
               <p className="text-4xl font-bold inline border-b-4 border-[#000000]">About</p>

@@ -26,7 +26,7 @@ const projects = [
 
 const Works = () => {
   return (
-    <div name='work' className='w-full md:h-screen text-[#000000] bg-[#1CD760]'>
+    <div name='work' className='w-full md:h-screen text-[#000000] bg-gradient-to-r from-[#1CD760] to-[#16a34a]'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='pb-8 w-full flex flex-col items-center'>
           <p className='text-4xl font-bold border-b-4 text-[#000000] border-[#000000]'>
