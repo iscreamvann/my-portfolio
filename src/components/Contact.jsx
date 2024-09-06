@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-screen bg-[#E3E3E3] flex justify-center items-center p-4 mt-20"
+      className="w-full h-screen bg-[#E3E3E3] flex justify-center items-center p-4"
     >
       <div className="flex flex-col max-w-[600px] w-full">
         <div className="pb-8 flex flex-col justify-center w-full h-full items-center">
