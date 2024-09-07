@@ -12,7 +12,7 @@ const Navbar = () => {
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-gradient-to-r from-[#1CD760] to-[#16a34a] text-[#000000] shadow-md z-50">
       <h1 className="text-2xl font-semibold font-poppins">KV</h1>
       <ul className="hidden md:flex gap-x-8">
-        {['home', 'about', 'skills', 'work', 'contact'].map((section) => (
+        {['home', 'about', 'skills', 'work'].map((section) => (
           <li key={section}>
             <Link
               to={section}
