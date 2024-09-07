@@ -61,6 +61,18 @@ const Bubble = styled.div`
 `;
 
 
+const SkillsContainer = styled.div`
+  min-height: 100vh; /* Ensures the Skills section takes at least the full viewport height */
+  max-height: 100vh; /* Prevents the container from exceeding the viewport height */
+  padding: 2rem;
+  background: #E3E3E3; /* Background color */
+  overflow-y: auto; /* Enable vertical scroll on smaller screens */
+  
+  @media (min-width: 768px) {
+    overflow-y: hidden; /* Hide scroll on larger screens */
+  }
+`;
+
 const Content = styled.div`
   position: relative;
   z-index: 1;
@@ -70,27 +82,52 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  min-height: 100vh; /* Ensures the content takes at least the full height of the viewport */
   text-align: center;
   color: #000; /* Ensure text color is black for readability */
+  
+  @media (max-width: 767px) {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
 `;
 
 const SkillsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Automatically adjust columns */
   gap: 1rem;
-  @media (min-width: 640px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
   text-align: center;
   padding: 2rem 0;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr; /* Single column on small screens */
+    padding: 1rem 0;
+  }
 `;
 
 const SkillItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
   box-shadow: 0 0 5px rgba(4, 12, 22, 0.1);
   transition: transform 0.5s ease;
+  max-width: 100%; /* Ensure it does not exceed container width */
+
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05); /* Slightly scale on hover */
+  }
+
+  /* Ensure text and images fit within the container */
+  p {
+    font-size: 1.2rem; /* Adjust font size as needed */
+    word-break: break-word;
+    margin: 0.5rem 0;
+  }
+
+  img {
+    max-width: 100%; /* Ensure image does not exceed the container */
+    height: auto; /* Maintain aspect ratio */
   }
 `;
 
@@ -129,9 +166,10 @@ function Skills() {
   return (
     <BubblesContainer name="skills">
       {bubbles}
-      <Content>
-        <h1 className='text-4xl font-bold inline border-b-4 border-[#000000] mb-7'>Skills</h1>
-        <p className='py-4 text-2xl'>
+      <SkillsContainer>
+      <Content SkillsContainer>
+      <h1 className='text-4xl font-bold inline border-b-4 border-[#000000] mb-7'>Skills</h1>
+      <p className='py-4 text-2xl'>
           I enjoy diving into and learning new things. Here's a list of technologies I've worked with
         </p>
         <SkillsGrid>
@@ -269,6 +307,7 @@ function Skills() {
 
         </SkillsGrid>
       </Content>
+      </SkillsContainer>
     </BubblesContainer>
   );
 }

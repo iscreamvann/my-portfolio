@@ -25,8 +25,15 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <div onClick={handleClick} className="md:hidden z-10 flex items-center justify-center w-10 h-10 bg-[#1CD760] rounded-full">
-        {!nav ? <FaBars size={30} className="text-white" /> : <FaTimes size={30} className="text-white" />}
+      <div
+        onClick={handleClick}
+        className="md:hidden z-10 flex items-center justify-center w-10 h-10 bg-transparent rounded-full  outline-none"
+      >
+        {!nav ? (
+          <FaBars size={30} className="text-black" />
+        ) : (
+          <FaTimes size={30} className="text-white" />
+        )}
       </div>
       <ul
         className={`fixed top-0 left-0 w-full h-screen bg-[#000000] flex flex-col justify-center items-center ${nav ? 'block' : 'hidden'}`}
