@@ -13,7 +13,7 @@ const Home = () => {
             Hey,{" "}
             <span>
               <Typewriter
-                words={["I'm Kyle", "A Full-Stack Engineer."]}
+                words={["I'm Kyle", "I'm A Full-Stack Engineer."]}
                 cursor
                 cursorStyle="|"
                 typeSpeed={180}
