@@ -2,25 +2,32 @@ import React, { useState } from 'react';
 
 const projects = [
   {
-    name: 'CSS Spotify Replica',
-    description: 'My first CSS project, created during my time at Boolean UK.',
-    image: 'https://storage.googleapis.com/pr-newsroom-wp/1/2024/01/Spotify_FTR_Header.png',
-    demoLink: 'https://main--spotify-replica-kv.netlify.app/',
-    codeLink: 'https://github.com/iscreamvann/html-spotify-challenge.git',
-  },
-  {
     name: 'Reel Moments',
     description: 'A fishing logbook app developed to help anglers track and enhance their fishing experiences.',
-    image: 'https://static.vecteezy.com/system/resources/previews/002/834/461/non_2x/summer-fishing-background-free-vector.jpg',
+    image: 'https://media.licdn.com/dms/image/sync/v2/D4E27AQHpnBDxGjwLDA/articleshare-shrink_800/articleshare-shrink_800/0/1725899434813?e=1726506000&v=beta&t=58QrbKBEtORkCDtesdTkrfPkYVFrjf-w4RgO65umz5g',
     demoLink: '/',
     codeLink: '/',
   },
   {
     name: 'My Portfolio',
     description: 'A showcase of my skills and projects.',
-    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b547b5111139045.5ffc8a2ab537c.jpg',
+    image: 'https://media.licdn.com/dms/image/sync/v2/D4E27AQHBbFq9PiYIMQ/articleshare-shrink_800/articleshare-shrink_800/0/1725898439946?e=1726506000&v=beta&t=psM1h4p-vepZoPuUrq4JDdyTOVfdVrFy6cwEHzt2nUY',
     demoLink: 'https://main--kylevannportfolio.netlify.app/',
     codeLink: 'https://github.com/iscreamvann/my-portfolio.git',
+  },
+  {
+    name: 'Lots Of Lists (LOL)',
+    description: 'Lots Of Lists: A stylish React app for managing tasks with priority, due dates, and persistent storage. Sleek design and user-friendly features to boost your productivity.',
+    image: 'https://media.licdn.com/dms/image/sync/v2/D4E27AQEg5DDIpsu2FQ/articleshare-shrink_800/articleshare-shrink_800/0/1725898538824?e=1726506000&v=beta&t=SitL9k_gvW4nGdkjkTyElSb-pCZUwoIZANGiGkKfJtw',
+    demoLink: 'https://lotsoflists.netlify.app/',
+    codeLink: 'https://github.com/iscreamvann/to-do-list',
+  },
+  {
+    name: 'CSS Spotify Replica',
+    description: 'My first CSS project, created during my time at Boolean UK.',
+    image: 'https://media.licdn.com/dms/image/sync/v2/D4E27AQHLwLlBMc757Q/articleshare-shrink_800/articleshare-shrink_800/0/1725357384534?e=1726506000&v=beta&t=MqlrVXn2FmFKhBSfywG_GyBi8wXuCWvSVhAEwOVW6J4',
+    demoLink: 'https://main--spotify-replica-kv.netlify.app/',
+    codeLink: 'https://github.com/iscreamvann/html-spotify-challenge.git',
   },
 ];
 
@@ -29,6 +36,62 @@ const Works = () => {
 
   const handleCardClick = (index) => {
     setFlipped(flipped === index ? null : index);
+  };
+
+  const cardWrapperStyles = {
+    position: 'relative',
+    width: '100%',
+    height: '250px',
+    perspective: '1000px',
+    flexShrink: 0,
+    marginRight: '16px',
+  };
+
+  const cardStyles = {
+    position: 'relative',
+    width: '100%',
+    height: '100%',
+    transition: 'transform 0.6s',
+    transformStyle: 'preserve-3d',
+    cursor: 'pointer',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+  };
+
+  const cardFlippedStyles = {
+    ...cardStyles,
+    transform: 'rotateY(180deg)',
+  };
+
+  const cardSideStyles = {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    backfaceVisibility: 'hidden',
+    backgroundColor: '#fff', // Set background color to white
+  };
+
+  const cardFrontStyles = (imageUrl) => ({
+    ...cardSideStyles,
+    backgroundSize: 'contain', // or 'cover' depending on the desired effect
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundImage: `url(${imageUrl})`,
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+  });
+
+  const cardBackStyles = {
+    ...cardSideStyles,
+    color: '#000',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    transform: 'rotateY(180deg)',
+    padding: '20px',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
   };
 
   return (
@@ -42,21 +105,21 @@ const Works = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className='card-wrapper'
+              style={cardWrapperStyles}
               onClick={() => handleCardClick(index)}
             >
               <div
-                className={`card ${flipped === index ? 'flipped' : ''}`}
+                style={flipped === index ? cardFlippedStyles : cardStyles}
               >
                 <div
+                  style={cardFrontStyles(project.image)}
                   className='card-front'
-                  style={{ backgroundImage: `url(${project.image})` }}
                 >
                   <div className='card-front-content' style={{ position: 'absolute', top: '20px', width: '100%', textAlign: 'center', color: '#000' }}>
                     <span className='text-lg font-bold tracking-wider'>{project.name}</span>
                   </div>
                 </div>
-                <div className='card-back'>
+                <div style={cardBackStyles} className='card-back'>
                   <div className='card-content'>
                     <p className='text-center'>{project.description}</p>
                     <div className='pt-8 text-center'>
