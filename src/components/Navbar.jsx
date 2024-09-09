@@ -38,7 +38,7 @@ const Navbar = () => {
       <ul
         className={`fixed top-0 left-0 w-full h-screen bg-[#000000] flex flex-col justify-center items-center ${nav ? 'block' : 'hidden'}`}
       >
-        {['home', 'about', 'skills', 'work', 'contact'].map((section) => (
+        {['home', 'about', 'skills', 'work'].map((section) => (
           <li key={section} className="py-6 text-4xl font-poppins">
             <Link
               onClick={handleClick}
