@@ -1,31 +1,53 @@
 import React, { useState } from 'react';
+import fishingLogbookFrontend from '../assets/fishingLogbookFrontend.jpeg';
+import fishingLogbookBackend from '../assets/logbookBackend.jpeg';
+import myPortfolio from '../assets/my-portfolio.jpeg';
+import toDoList from '../assets/to-do-list.jpeg';
+import spotifyReplica from '../assets/spotify-replica.jpeg';
+import manchesterGit from '../assets/manchesterGIT.png';
+
+
 
 const projects = [
   {
-    name: 'Reel Moments',
-    description: 'A fishing logbook app developed to help anglers track and enhance their fishing experiences.',
-    image: 'https://media.licdn.com/dms/image/sync/v2/D4E27AQHpnBDxGjwLDA/articleshare-shrink_800/articleshare-shrink_800/0/1725899434813?e=1726506000&v=beta&t=58QrbKBEtORkCDtesdTkrfPkYVFrjf-w4RgO65umz5g',
-    demoLink: '/',
-    codeLink: '/',
-  },
-  {
     name: 'My Portfolio',
-    description: 'A showcase of my skills and projects.',
-    image: 'https://media.licdn.com/dms/image/sync/v2/D4E27AQHBbFq9PiYIMQ/articleshare-shrink_800/articleshare-shrink_800/0/1725898439946?e=1726506000&v=beta&t=psM1h4p-vepZoPuUrq4JDdyTOVfdVrFy6cwEHzt2nUY',
+    description: 'A showcase of my skills and projects. A very fun and stylish design, that I am incredibly proud of.',
+    image: myPortfolio,
     demoLink: 'https://main--kylevannportfolio.netlify.app/',
     codeLink: 'https://github.com/iscreamvann/my-portfolio.git',
   },
   {
+    name: 'Fishing Logbook Frontend',
+    description: 'A fishing logbook app developed to help anglers track and enhance their fishing experiences.',
+    image: fishingLogbookFrontend,
+    demoLink: '/',
+    codeLink: 'https://github.com/iscreamvann/fishing-logbook-frontend',
+  },
+  {
+    name: 'Fishing Logbook Backend',
+    description: 'Unfortunately the App is not currently deployed, but do feel free to have a look at my code throughout my gitHub account and repositories.',
+    image: fishingLogbookBackend,
+    demoLink: '/',
+    codeLink: 'https://github.com/iscreamvann/fishing-logbook-frontend',
+  },
+  {
+    name: 'Manchester United Project',
+    description: 'Unfortunately the App is not currently deployed, but do feel free to have a look at my code throughout my gitHub account and repositories.',
+    image: manchesterGit,
+    demoLink: '/',
+    codeLink: 'https://github.com/iscreamvann/manchesterUnited-project',
+  },
+  {
     name: 'Lots Of Lists (LOL)',
     description: 'Lots Of Lists: A stylish React app for managing tasks with priority, due dates, and persistent storage. Sleek design and user-friendly features to boost your productivity.',
-    image: 'https://media.licdn.com/dms/image/sync/v2/D4E27AQEg5DDIpsu2FQ/articleshare-shrink_800/articleshare-shrink_800/0/1725898538824?e=1726506000&v=beta&t=SitL9k_gvW4nGdkjkTyElSb-pCZUwoIZANGiGkKfJtw',
+    image: toDoList,
     demoLink: 'https://lotsoflists.netlify.app/',
     codeLink: 'https://github.com/iscreamvann/to-do-list',
   },
   {
     name: 'CSS Spotify Replica',
     description: 'My first CSS project, created during my time at Boolean UK.',
-    image: 'https://media.licdn.com/dms/image/sync/v2/D4E27AQHLwLlBMc757Q/articleshare-shrink_800/articleshare-shrink_800/0/1725357384534?e=1726506000&v=beta&t=MqlrVXn2FmFKhBSfywG_GyBi8wXuCWvSVhAEwOVW6J4',
+    image: spotifyReplica,
     demoLink: 'https://main--spotify-replica-kv.netlify.app/',
     codeLink: 'https://github.com/iscreamvann/html-spotify-challenge.git',
   },
@@ -99,7 +121,7 @@ const Works = () => {
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='pb-8 w-full flex flex-col items-center'>
           <p className='text-4xl font-bold border-b-4 text-[#000000] border-[#000000]'>Work</p>
-          <p className='py-6 text-2xl'>Check out some of my most recent work</p>
+          <p className='py-6 text-2xl'>Please click the cards below, to check out some of my most recent work.</p>
         </div>
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
           {projects.map((project, index) => (
