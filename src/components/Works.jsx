@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import fishingLogbookFrontend from '../assets/fishingLogbookFrontend.jpeg';
 import fishingLogbookBackend from '../assets/logbookBackend.jpeg';
-import myPortfolio from '../assets/my-portfolio.jpeg';
-import toDoList from '../assets/to-do-list.jpeg';
+import myPortfolio from '../assets/my-portfolio.png';
+import toDoList from '../assets/to-do-list.png';
 import spotifyReplica from '../assets/spotify-replica.jpeg';
-import manchesterGit from '../assets/manchesterGIT.png';
+import aboveTheFold from '../assets/aboveTheFold.png';
 
 
 
@@ -15,6 +15,20 @@ const projects = [
     image: myPortfolio,
     demoLink: 'https://main--kylevannportfolio.netlify.app/',
     codeLink: 'https://github.com/iscreamvann/my-portfolio.git',
+  },
+  {
+    name: 'Above The Fold Challenge',
+    description: 'A fully responsive React project built with styled-components, replicating an existing website for an interview challenge. It adapts seamlessly from desktop to mobile.',
+    image: aboveTheFold,
+    demoLink: 'https://above-the-fold-challenge.netlify.app/',
+    codeLink: 'https://github.com/iscreamvann/above-the-fold-challenge',
+  },
+  {
+    name: 'Responsive List Application',
+    description: 'A responsive list web application built with React, allowing users to sort items by date and priority, with a seamless experience across desktop and mobile devices.',
+    image: toDoList,
+    demoLink: 'https://lotsoflists.netlify.app/',
+    codeLink: 'https://github.com/iscreamvann/to-do-list',
   },
   {
     name: 'Fishing Logbook Frontend',
@@ -31,21 +45,7 @@ const projects = [
     codeLink: 'https://github.com/iscreamvann/fishing-logbook-frontend',
   },
   {
-    name: 'Manchester United Project',
-    description: 'Unfortunately the App is not currently deployed, but do feel free to have a look at my code throughout my gitHub account and repositories.',
-    image: manchesterGit,
-    demoLink: '/',
-    codeLink: 'https://github.com/iscreamvann/manchesterUnited-project',
-  },
-  {
-    name: 'Lots Of Lists (LOL)',
-    description: 'Lots Of Lists: A stylish React app for managing tasks with priority, due dates, and persistent storage. Sleek design and user-friendly features to boost your productivity.',
-    image: toDoList,
-    demoLink: 'https://lotsoflists.netlify.app/',
-    codeLink: 'https://github.com/iscreamvann/to-do-list',
-  },
-  {
-    name: 'CSS Spotify Replica',
+    name: 'Spotify CSS Replica',
     description: 'My first CSS project, created during my time at Boolean UK.',
     image: spotifyReplica,
     demoLink: 'https://main--spotify-replica-kv.netlify.app/',
